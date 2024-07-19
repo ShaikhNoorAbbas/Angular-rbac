@@ -1,45 +1,65 @@
-<form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
-  <div>
-    <label for="username">Username:</label>
-    <input id="username" formControlName="username" required />
-    <div
-      *ngIf="
-        registerForm.get('username')?.invalid &&
-        registerForm.get('username')?.touched
-      "
-    >
-      Username is required
+<div class="formContainer">
+  <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="username">Username:</label>
+      <input
+        id="username"
+        placeholder="Enter userName"
+        formControlName="username"
+        required
+      />
+      <div
+        *ngIf="
+          registerForm.get('username')?.invalid &&
+          registerForm.get('username')?.touched
+        "
+      >
+        Username is required
+      </div>
     </div>
-  </div>
-  <div>
-    <label for="email">Email:</label>
-    <input type="email" id="email" formControlName="email" required />
-    <div
-      *ngIf="
-        registerForm.get('email')?.invalid && registerForm.get('email')?.touched
-      "
-    >
-      Valid email is required
+    <div>
+      <label for="email">Email:</label>
+      <input
+        type="email"
+        id="email"
+        formControlName="email"
+        placeholder="Enter your Email"
+        required
+      />
+      <div
+        *ngIf="
+          registerForm.get('email')?.invalid &&
+          registerForm.get('email')?.touched
+        "
+      >
+        Valid email is required
+      </div>
     </div>
-  </div>
-  <div>
-    <label for="password">Password:</label>
-    <input type="password" id="password" formControlName="password" required />
-    <div
-      *ngIf="
-        registerForm.get('password')?.invalid &&
-        registerForm.get('password')?.touched
-      "
-    >
-      Password is required
+    <div>
+      <label for="password">Password:</label>
+      <input
+        type="password"
+        id="password"
+        formControlName="password"
+        required
+        placeholder="Enter your password"
+      />
+      <div
+        *ngIf="
+          registerForm.get('password')?.invalid &&
+          registerForm.get('password')?.touched
+        "
+      >
+        Password is required
+      </div>
     </div>
-  </div>
-  <div>
-    <label for="role">Role:</label>
-    <select id="role" formControlName="role">
-      <option value="user">User</option>
-      <option value="admin">Admin</option>
-    </select>
-  </div>
-  <button type="submit" [disabled]="registerForm.invalid">Register</button>
-</form>
+    <div>
+      <label for="role">Role:</label>
+      <select id="role" formControlName="role">
+        <option value="user">User</option>
+        <option value="admin">Admin</option>
+      </select>
+    </div>
+    <button type="submit" [disabled]="registerForm.invalid">Register</button>
+  </form>
+</div>

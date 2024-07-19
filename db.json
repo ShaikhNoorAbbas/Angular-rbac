@@ -1,7 +1,7 @@
 {
   "users": [
     {
-      "id": 1,
+      "id": "1",
       "username": "hello",
       "email": "hello@gmail.com",
       "password": "1234567890",
@@ -10,12 +10,21 @@
       ]
     },
     {
-      "id": 2,
+      "id": "2",
       "username": "World",
       "email": "world@gmail.com",
       "password": "1234",
       "roles": [
         "user"
+      ]
+    },
+    {
+      "id": 3,
+      "username": "world",
+      "email": "world@gmail.com",
+      "password": "1234",
+      "roles": [
+        "admin"
       ]
     }
   ]
