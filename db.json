@@ -19,10 +19,28 @@
       ]
     },
     {
-      "id": 3,
+      "id": "3",
       "username": "world",
       "email": "world@gmail.com",
       "password": "1234",
+      "roles": [
+        "admin"
+      ]
+    },
+    {
+      "id": "4",
+      "username": "John",
+      "email": "john@gmail.com",
+      "password": "1234",
+      "roles": [
+        "user"
+      ]
+    },
+    {
+      "id": 5,
+      "username": "James",
+      "email": "james@gmail.com",
+      "password": "4321",
       "roles": [
         "admin"
       ]
